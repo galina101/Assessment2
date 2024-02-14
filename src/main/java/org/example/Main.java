@@ -4,14 +4,21 @@ package org.example;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        String input = "abbabba";
+        String result = "";
+        System.out.println("Total length: " + input.length());
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        //flip the string
+        for (int i = input.length()-1; i >=0; i--) {
+            System.out.println("position " + i + " character " + input.charAt(i));
+            result = result + input.charAt(i);
+            System.out.println(result);
         }
+
+        //compare 2 strings, if equal then palindrome
+        if (input.equals(result)) {
+            System.out.println("This is a palindrome");
+        }
+
     }
 }
